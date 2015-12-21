@@ -91,7 +91,7 @@ public class TweetsArrayAdapter extends ArrayAdapter {
 
         viewHolder.ivMedia.setTag(tweet.getTweet_id());
         viewHolder.ivMedia.setImageResource(0); viewHolder.ivMedia.setImageDrawable(null);
-        viewHolder.tvRetweet.setText(tweet.getRetweet_count() > 0 ? String.valueOf(tweet.getRetweet_count()) : "5");
+        viewHolder.tvRetweet.setText(tweet.getRetweet_count() > 0 ? String.valueOf(tweet.getRetweet_count()) : "");
         viewHolder.tvFavorite.setText(tweet.getFavorite_count() > 0 ? String.valueOf(tweet.getFavorite_count()) : "");
         if (media != null) {
             Picasso.with(getContext()).load(media.getMedia_url()).into(viewHolder.ivMedia);
