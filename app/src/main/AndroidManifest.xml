@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.codepath.apps.restclienttemplate"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".RestApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="TwitterClient.db" />
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="1" />
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="com.codepath.apps.restclienttemplate.models.Tweet, com.codepath.apps.restclienttemplate.models.TwitterMedia, com.codepath.apps.restclienttemplate.models.TwitterUser,com.codepath.apps.restclienttemplate.models.Mentions" />
+
+
+        <activity
+            android:name=".activities.LoginActivity"
+            android:theme="@style/AppTheme"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="thecodepath.com"
+                    android:scheme="oauth" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.HomeTimelineActivity"
+            android:icon="@drawable/ic_title"
+            android:label="@string/title_activity_home_timeline" >
+        </activity>
+        <activity
+            android:name=".activities.DetailedViewActivity"
+            android:label="@string/title_activity_detailed_view" >
+        </activity>
+        <activity android:name=".activities.ViewProfileActivity"
+            android:label="View Profile" />
+    </application>
+
+</manifest>

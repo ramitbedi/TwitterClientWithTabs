@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.codepath.apps.restclienttemplate.activities.HomeTimelineActivity">
+
+    <item android:id="@+id/action_view_profile" android:title="View Profile" android:icon="@drawable/ic_profile"
+        app:showAsAction="always" />
+    <item android:id="@+id/action_write_tweet" android:title="Write Tweet" android:orderInCategory="50"
+        android:icon="@drawable/ic_compose" app:showAsAction="always" />
+</menu>
